@@ -50,7 +50,7 @@ for ($i = 0; $i < count($o); $i++) {
 	$rtext = utf8_decode_ent($rtext);
 
 	if (!$r["prerelease"]) {
-		for ($j = 0; $j < count($r["assets"]); $j++) {
+		for ($j = count($r["assets"]) - 1; $j >= 0; $j--) {
 			$a = $r["assets"][$j];
 			$url = $a["browser_download_url"];
 			$size = $a["size"];
